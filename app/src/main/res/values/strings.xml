@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Forager</string>
+    <string name="romance">Romance</string>
+    <string name="sci_fi">Science Fiction</string>
+    <string name="fantasy">Fantasy</string>
+    <string name="mystery">Mystery</string>
+    <string name="book_cover_image">Book Cover Image</string>
+    <string name="search">Search</string>
+    <string name="mystery_description">Title: And Then There Were None\n\nAuthor(s): Agatha Christie\n\nTen people, each with something to hide and something to fear, are invited to an isolated mansion on Indian Island by a host who, surprisingly, fails to appear. One by one, the guests share the darkest secrets of their wicked pasts. And one by one, they die.</string>
+    <string name="fantasy_description">Title: A Game of Thrones\n\nAuthor(s): George R. R. Martin\n\nLong ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister…</string>
+    <string name="sci_fi_description">Title: Dune\n\nAuthor(s): Frank Herbert\n\nHere is the novel that will be forever considered a triumph of the imagination. Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Muad\'Dib. He would avenge the traitorous plot against his noble family…</string>
+    <string name="romance_description">Title: The Notebook\n\nAuthor(s): Nicholas Sparks\n\nEvery so often a love story so captures our hearts that it becomes more than a story-it becomes an experience to remember forever. The Notebook is such a book. It is a celebration of how passion can be ageless and timeless, a tale that moves us to laughter and…</string>
+    <string name="search_for_a_book">Search For a Book</string>
+    <string name="get_mystery_book">Get Mystery Book</string>
+    <string name="get_fantasy_book">Get Fantasy Book</string>
+    <string name="get_sci_fi_book">Get Sci Fi Book</string>
+    <string name="get_romance_book">Get Romance Book</string>
+</resources>

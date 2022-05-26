@@ -1,0 +1,268 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <!-- Book Search -->
+        <EditText
+            android:id="@+id/search_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/search_for_a_book"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="15pt"
+            app:contentPaddingBottom="10dp"
+            app:contentPaddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            app:contentPaddingBottom="30dp"
+            app:contentPaddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_query" />
+        <!-- Book Search Ends -->
+
+        <!-- Mystery Book -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mystery_card1"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/mysteryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/get_mystery_book" />
+
+                <ImageView
+                    android:id="@+id/mystery_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/book_cover_image"
+                    android:src="@drawable/and_then_there_were_none_book_cover" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mystery_info_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-black"
+                        android:maxLines="6"
+                        android:text="@string/mystery_description"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- Mystery Book End -->
+
+        <!-- Fantasy Book -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fantasy_card1"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mystery_card1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/fantasyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/get_fantasy_book" />
+
+                <ImageView
+                    android:id="@+id/fantasy_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/book_cover_image"
+                    android:src="@drawable/a_game_of_thrones_book_cover" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/fantasy_info_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-black"
+                        android:maxLines="6"
+                        android:text="@string/fantasy_description"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- Fantasy Book End -->
+
+        <!-- Sci Fi Book -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sci_fi_card1"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fantasy_card1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sci_fiButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/get_sci_fi_book" />
+
+                <ImageView
+                    android:id="@+id/sci_fi_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/book_cover_image"
+                    android:src="@drawable/dune_book_cover" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/sci_fi_info_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-black"
+                        android:maxLines="6"
+                        android:text="@string/sci_fi_description"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- Sci Fi Book End -->
+
+        <!-- Romance Book -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/romance_card1"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sci_fi_card1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/romanceButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/get_romance_book" />
+
+                <ImageView
+                    android:id="@+id/romance_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/book_cover_image"
+                    android:src="@drawable/the_notebook_book_cover" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/romance_info_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-black"
+                        android:maxLines="6"
+                        android:text="@string/romance_description"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- Romance Book End -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
