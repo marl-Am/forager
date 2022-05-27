@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.request.FutureTarget;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.google.android.material.snackbar.Snackbar;
@@ -30,7 +26,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Random;
-import java.util.concurrent.ExecutionException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -105,13 +100,10 @@ public class MainActivity extends AppCompatActivity {
         Thread getNewMysteryBookThread = new Thread() {
             public void run() {
                 try {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ImageView mysteryBookImageView = findViewById(R.id.mystery_image);
-                            TextView mysteryBookTextView = findViewById(R.id.mystery_info_text1);
-                            newBook("Mystery", mysteryBookImageView, mysteryBookTextView);
-                        }
+                    runOnUiThread(() -> {
+                        ImageView mysteryBookImageView = findViewById(R.id.mystery_image);
+                        TextView mysteryBookTextView = findViewById(R.id.mystery_info_text1);
+                        newBook("Mystery", mysteryBookImageView, mysteryBookTextView);
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -125,13 +117,10 @@ public class MainActivity extends AppCompatActivity {
         Thread getNewFantasyBookThread = new Thread() {
             public void run() {
                 try {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ImageView fantasyBookImageView = findViewById(R.id.fantasy_image);
-                            TextView fantasyBookTextView = findViewById(R.id.fantasy_info_text1);
-                            newBook("Fantasy", fantasyBookImageView, fantasyBookTextView);
-                        }
+                    runOnUiThread(() -> {
+                        ImageView fantasyBookImageView = findViewById(R.id.fantasy_image);
+                        TextView fantasyBookTextView = findViewById(R.id.fantasy_info_text1);
+                        newBook("Fantasy", fantasyBookImageView, fantasyBookTextView);
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -145,13 +134,10 @@ public class MainActivity extends AppCompatActivity {
         Thread getNewScienceFictionBookThread = new Thread() {
             public void run() {
                 try {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ImageView scienceFictionBookImageView = findViewById(R.id.sci_fi_image);
-                            TextView scienceFictionBookTextView = findViewById(R.id.sci_fi_info_text1);
-                            newBook("Science Fiction", scienceFictionBookImageView, scienceFictionBookTextView);
-                        }
+                    runOnUiThread(() -> {
+                        ImageView scienceFictionBookImageView = findViewById(R.id.sci_fi_image);
+                        TextView scienceFictionBookTextView = findViewById(R.id.sci_fi_info_text1);
+                        newBook("Science Fiction", scienceFictionBookImageView, scienceFictionBookTextView);
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -165,13 +151,10 @@ public class MainActivity extends AppCompatActivity {
         Thread getNewRomanceBookThread = new Thread() {
             public void run() {
                 try {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ImageView romanceBookImageView = findViewById(R.id.romance_image);
-                            TextView romanceBookTextView = findViewById(R.id.romance_info_text1);
-                            newBook("Romance", romanceBookImageView, romanceBookTextView);
-                        }
+                    runOnUiThread(() -> {
+                        ImageView romanceBookImageView = findViewById(R.id.romance_image);
+                        TextView romanceBookTextView = findViewById(R.id.romance_info_text1);
+                        newBook("Romance", romanceBookImageView, romanceBookTextView);
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -255,11 +238,6 @@ public class MainActivity extends AppCompatActivity {
                                         public void onLoadCleared(@Nullable Drawable placeholder) {
                                         }
                                     });
-
-//                            Glide.with(MainActivity.this)
-//                                    .load(imageUrl)
-//                                    .error(R.drawable.no_image_found)
-//                                    .into(dashboardImageView);
                         } catch (Exception e) {
                             Log.i("INFO", "Enter trace.");
                             e.printStackTrace();

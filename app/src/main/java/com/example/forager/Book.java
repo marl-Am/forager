@@ -78,9 +78,6 @@ public class Book {
         results += "Title: " + this.getTitle() + "\n\n" +
                 "\n\n" + "Author(s): " + authorsString + "\n\n" +
                 this.getDescription() + "\n";
-        if (results.length() == 0) {
-            return "String Empty.";
-        }
         return results;
     }
 
