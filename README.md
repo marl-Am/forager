@@ -14,8 +14,8 @@ This is the front page.
 If we would like to change one of the books displayed on the front page:
 Let's click the Get Romance Book button. Our response would be this.
 
-<img src="images/front-romance-search-results.png" width="150" height="150">
+<img src="images/front-romance-search-results.png" width="250" height="250">
 
 When searching for a book, entire your query in to the input field then click the search button. Let's say we would like to find the book Never Go Back. The app returns:
 
-<img src="images/search-results.png" width="150" height="150">
+<img src="images/search-results.png" width="250" height="250">
