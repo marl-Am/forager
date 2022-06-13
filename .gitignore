@@ -44,3 +44,6 @@ gradlew
 build.gradle
 .pro
 .idea/
+.idea
+/.idea
+
