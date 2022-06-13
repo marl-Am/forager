@@ -1,5 +1,25 @@
 *.iml
-.gradle
+
+# Gradle files
+.gradle/
+build/
+gradle/
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+Test/
+
+androidTest/
+
+libs/
+
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -8,8 +28,14 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
+
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+
+gradlew.bat
+gradlew
+build.gradle
+.pro
+.idea/

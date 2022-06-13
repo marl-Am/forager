@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         searchButton.setOnClickListener(view -> {
             if (search_query.getText().length() > 0) {
-                getUrl(search_query.getText().toString());
+                queryGoogleBooksApi(search_query.getText().toString());
                 Snackbar.make(view, "Success", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             } else {
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected void getUrl(String query) {
+    protected void queryGoogleBooksApi(String query) {
 
         String url = "https://www.googleapis.com/books/v1/volumes?q=" +
                 query +
