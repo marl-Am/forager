@@ -3,13 +3,13 @@ Forager is an Android application that calls the Google Books Api to search for 
 
 This is the front page.
 
-<img src="images/front-mystery.png" width="150" height="150">
+<img src="images/front-mystery.png" width="250" height="250">
 
-<img src="images/front-fantasy.png" width="150" height="150">
+<img src="images/front-fantasy.png" width="250" height="250">
 
-<img src="images/front-scifi.png" width="150" height="150">
+<img src="images/front-scifi.png" width="250" height="250">
 
-<img src="images/front-romance.png" width="150" height="150">
+<img src="images/front-romance.png" width="250" height="250">
 
 If we would like to change one of the books displayed on the front page:
 Let's click the Get Romance Book button. Our response would be this.
