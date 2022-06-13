@@ -1,4 +1,5 @@
 #forager
+
 Forager is an Android application that calls the Google Books Api to search for any book that google has access to.
 
 This is the front page.
@@ -19,3 +20,5 @@ Let's click the Get Romance Book button. Our response would be this.
 When searching for a book, entire your query in to the input field then click the search button. Let's say we would like to find the book Never Go Back. The app returns:
 
 <img src="images/search-results.png" width="250" height="250">
+
+We can click back to exit the newly created search results window.
